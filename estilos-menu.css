@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Scroll general del body */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, crimson, #550000);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff5c5c, crimson);
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(13, 13, 84, 1) 10%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    color: white;
+    font-family: 'Montserrat';
+}
+
+/* vista completa */
+.contenedor__app {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* barra de navegación */
+.navbar {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+/* parte de arriba de navbar */
+.navbar__arriba {
+    width: 100%;
+    padding: 0 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* contenedor de logo y titulo  */
+.navbar__logo__titulo {
+    display: flex;
+    align-items: center;
+}
+
+/* logo moviepick */
+.navbar__logo {
+    width: 10em;
+    height: 100%;
+}
+
+/* titulo de la pagina */
+.navbar__titulo {
+    font-size: 4em;
+}
+
+/* contenedor de iconos en navbar */
+.navbar__iconos {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+/* icono guardar o moño/liston */
+.navbar__iconos__guardar {
+    stroke: white;
+    fill: white;
+    cursor: pointer;
+}
+
+.navbar__iconos__buscar {
+    cursor: pointer;
+}
+
+/* barra de botones */
+.navbar__links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+/* botones */
+.navbar__button {
+    background: none;
+    border: 1px solid #444;
+    color: white;
+    padding: 0.7em 3em;
+    border-radius: 2em;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* efecto de boton al pasar mouse por enima */
+.navbar__button:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
+    transition: 0.5s;
+}
+
+/* logo de categorias */
+.content__logo {
+    width: 1.2em;
+}
+
+/* contenedor de carrusel */
+.content_carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* titulos de categorías */
+.app__h2 {
+    padding-left: 2em;
+    font-size: 1.7em;
+    margin: 0.5em 0;
+}
+
+/* contenedor de items */
+.content__poster__list {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5em;
+    padding-bottom: 1em;
+    padding-left: 4em;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+/* scroll de contenedor oculto */
+.content__poster__list::-webkit-scrollbar {
+    display: none;
+}
+
+/* marco de items de pelis */
+.content__poster__item {
+    flex-shrink: 0;
+    width: 10em;
+    height: 15em;
+}
+
+/* imagenes de pelis */
+.content__poster__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2.2em;
+}
+
+/* flechas de carrusel */
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: crimson;
+    font-size: 2.5em;
+    width: 1em;
+    height: 2em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+}
+
+/* flecha derecha */
+.scroll-arrow.right {
+    right: 0.3em;
+}
+
+.scroll-arrow.right:hover {
+    background-color: crimson;
+    color: white;
+}
+
+/* flecha izquierda */
+.scroll-arrow.left {
+    left: 0.3em;
+}
